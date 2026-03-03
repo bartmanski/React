@@ -6,7 +6,7 @@ function App() {
     <div className="app">
       <BusinessCard
         imageUrl="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop"
-        name="Bartosz Kębel"
+        name="Bartosz Kebel"
         position="Senior Full-Stack Developer & Software Architect"
         email="bartosz.kebel@example.com"
         phone="+48 123 456 789"
