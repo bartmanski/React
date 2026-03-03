@@ -1,0 +1,20 @@
+.about-me {
+  padding: 1.5rem;
+  background-color: white;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.about-title {
+  color: #495057;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.about-description {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  text-align: justify;
+}
