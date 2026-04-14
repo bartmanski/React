@@ -1,0 +1,55 @@
+classDiagram
+    class App {
+        -searchQuery: string
+        -showFavorites: boolean
+        +render()
+    }
+    
+    class RecipeProvider {
+        -children: ReactNode
+        +state: RecipeState
+        +dispatch: Action
+    }
+
+    class SearchBar {
+        +searchQuery: string
+        +setSearchQuery: (query: string) => void
+        +showFavorites: boolean
+        +setShowFavorites: (show: boolean) => void
+        +render()
+    }
+
+    class AddRecipeForm {
+        -title: string (state)
+        -description: string (state)
+        +render()
+    }
+
+    class RecipeList {
+        +searchQuery: string
+        +showFavorites: boolean
+        +render()
+    }
+
+    class RecipeCard {
+        +recipe: Recipe
+        +render()
+    }
+    
+    class Recipe {
+        +id: string
+        +title: string
+        +description: string
+        +isFavorite: boolean
+    }
+
+    App *-- RecipeProvider
+    RecipeProvider *-- SearchBar : inside
+    RecipeProvider *-- AddRecipeForm : inside
+    RecipeProvider *-- RecipeList : inside
+    RecipeList *-- RecipeCard : maps
+    RecipeCard ..> Recipe : displays
+    
+    note for SearchBar "Receives state setters from App"
+    note for RecipeList "Receives filter criteria from App"
+    note for AddRecipeForm "Uses Dispatch from Context internally"
