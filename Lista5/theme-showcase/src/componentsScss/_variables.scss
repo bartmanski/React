@@ -1,0 +1,45 @@
+// ──────────────────────────────────────────────────────────
+// VARIABLES - Globalne wartości SCSS
+// ──────────────────────────────────────────────────────────
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 6px;
+$spacing-md: 12px;
+$spacing-lg: 16px;
+$spacing-xl: 20px;
+$spacing-2xl: 24px;
+$spacing-3xl: 32px;
+
+// Border radius
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 999px;
+
+// Font sizing
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.78rem;
+$font-size-md: 0.8rem;
+$font-size-base: 0.88rem;
+$font-size-lg: 0.9rem;
+$font-size-xl: 1rem;
+$font-size-2xl: 1.3rem;
+$font-size-3xl: 1.4rem;
+
+// Font weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line heights
+$line-height-tight: 1.65;
+
+// Transitions
+$transition-fast: 0.2s ease-in-out;
+$transition-base: 0.3s ease-in-out;
+
+// Device breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;

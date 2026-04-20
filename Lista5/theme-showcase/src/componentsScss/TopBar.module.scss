@@ -1,0 +1,30 @@
+// ──────────────────────────────────────────────────────────
+// TOPBAR - Style dla paska górnego
+// ──────────────────────────────────────────────────────────
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.topBar {
+  @include flex-between;
+}
+
+.appTitle {
+  margin: 0;
+  font-size: $font-size-xl;
+  @include text-heading;
+}
+
+.themeSelect {
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-sm;
+  border: 1px solid;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  transition: background-color $transition-fast, border-color $transition-fast;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

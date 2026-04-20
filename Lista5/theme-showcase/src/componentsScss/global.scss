@@ -1,0 +1,16 @@
+// ──────────────────────────────────────────────────────────
+// Global styles - Importuje wszystkie moduły SCSS
+// ──────────────────────────────────────────────────────────
+
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base' as *;
+@use 'themes' as *;
+@use 'global-themes' as *;
+@use 'Card.module' as *;
+@use 'TopBar.module' as *;
+@use 'ProfileCard.module' as *;
+@use 'AboutCard.module' as *;
+@use 'SkillsCard.module' as *;
+@use 'ExperienceCard.module' as *;
+@use 'ContactCard.module' as *;

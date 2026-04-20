@@ -1,0 +1,21 @@
+// ──────────────────────────────────────────────────────────
+// CONTACT CARD - Style dla karty kontaktowej
+// ──────────────────────────────────────────────────────────
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.contactList {
+  @include flex-column;
+  gap: $spacing-sm;
+}
+
+.contactItem {
+  margin: 0;
+  font-size: $font-size-base;
+}
+
+.contactLabel {
+  @include text-semibold($font-size-md);
+  margin-right: $spacing-sm;
+}

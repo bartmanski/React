@@ -1,0 +1,28 @@
+// ──────────────────────────────────────────────────────────
+// BASE - Style globalne i base elements
+// ──────────────────────────────────────────────────────────
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  padding: $spacing-3xl $spacing-lg;
+  transition: background-color $transition-base, color $transition-base;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  @include flex-column;
+  gap: $spacing-lg;
+}

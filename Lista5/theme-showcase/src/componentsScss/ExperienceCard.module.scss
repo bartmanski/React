@@ -1,0 +1,35 @@
+// ──────────────────────────────────────────────────────────
+// EXPERIENCE CARD - Style dla karty doświadczenia
+// ──────────────────────────────────────────────────────────
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.experienceList {
+  @include flex-column;
+  gap: $spacing-md;
+}
+
+.experienceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: $spacing-md;
+}
+
+.experienceRole {
+  margin: 0;
+  @include text-semibold;
+}
+
+.experienceCompany {
+  margin: 2px 0 0;
+  font-size: $font-size-md;
+  @include opacity-faded;
+}
+
+.experiencePeriod {
+  font-size: $font-size-sm;
+  @include nowrap;
+  @include opacity-dimmed;
+}

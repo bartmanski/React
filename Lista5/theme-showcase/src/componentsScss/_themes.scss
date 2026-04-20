@@ -1,0 +1,108 @@
+// ──────────────────────────────────────────────────────────
+// THEMES - Mapy kolorów dla każdego motywu
+// ──────────────────────────────────────────────────────────
+
+@use 'variables' as *;
+
+// Definiowanie map z kolorami dla każdego motywu
+$theme-light: (
+  name: 'light',
+  background: #f1f5f9,
+  text-primary: #334155,
+  text-secondary: #0f172a,
+  text-tertiary: #e9d5ff,
+  card-bg: #ffffff,
+  card-border: #e2e8f0,
+  title-color: #0f172a,
+  avatar-bg: #3b82f6,
+  select-bg: #f8fafc,
+  select-border: #cbd5e1,
+  select-text: #334155,
+  heading-color: #64748b,
+);
+
+$theme-dark: (
+  name: 'dark',
+  background: #0f172a,
+  text-primary: #94a3b8,
+  text-secondary: #f1f5f9,
+  text-tertiary: #e2e8f0,
+  card-bg: #1e293b,
+  card-border: #334155,
+  title-color: #f1f5f9,
+  avatar-bg: #6366f1,
+  select-bg: #0f172a,
+  select-border: #475569,
+  select-text: #e2e8f0,
+  heading-color: #64748b,
+);
+
+$theme-midnight: (
+  name: 'midnight',
+  background: #1a1025,
+  text-primary: #c4b5fd,
+  text-secondary: #e9d5ff,
+  text-tertiary: #e9d5ff,
+  card-bg: #261838,
+  card-border: #3b2756,
+  title-color: #e9d5ff,
+  avatar-bg: #7c3aed,
+  select-bg: #1a1025,
+  select-border: #5b21b6,
+  select-text: #e9d5ff,
+  heading-color: #8b5cf6,
+);
+
+// Mixin do generowania CSS dla motywu
+@mixin apply-theme($theme) {
+  background: map-get($theme, background);
+  color: map-get($theme, text-primary);
+
+  .card {
+    background: map-get($theme, card-bg);
+    border-color: map-get($theme, card-border);
+  }
+
+  .app-title {
+    color: map-get($theme, title-color);
+  }
+
+  .theme-select {
+    background: map-get($theme, select-bg);
+    border-color: map-get($theme, select-border);
+    color: map-get($theme, select-text);
+  }
+
+  .profile-avatar {
+    background: map-get($theme, avatar-bg);
+  }
+
+  .profile-name {
+    color: map-get($theme, title-color);
+  }
+
+  .card-heading {
+    color: map-get($theme, heading-color);
+  }
+
+  .experience-role {
+    color: map-get($theme, title-color);
+  }
+
+  .contact-label {
+    color: map-get($theme, title-color);
+  }
+}
+
+// Aplikacja motywów do klas tematycznych
+.app.theme-light {
+  @include apply-theme($theme-light);
+}
+
+.app.theme-dark {
+  @include apply-theme($theme-dark);
+}
+
+.app.theme-midnight {
+  @include apply-theme($theme-midnight);
+}

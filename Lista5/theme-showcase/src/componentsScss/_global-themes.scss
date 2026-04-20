@@ -1,0 +1,126 @@
+// ──────────────────────────────────────────────────────────
+// GLOBAL THEMES - Theme colors that work globally
+// ──────────────────────────────────────────────────────────
+
+// Light Theme
+.app.theme-light {
+  background: #f1f5f9;
+  color: #334155;
+
+  .card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+  }
+
+  .appTitle {
+    color: #0f172a;
+  }
+
+  .themeSelect {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #334155;
+  }
+
+  .profileAvatar {
+    background: #3b82f6;
+  }
+
+  .profileName {
+    color: #0f172a;
+  }
+
+  .cardHeading {
+    color: #64748b;
+  }
+
+  .experienceRole {
+    color: #0f172a;
+  }
+
+  .contactLabel {
+    color: #0f172a;
+  }
+}
+
+// Dark Theme
+.app.theme-dark {
+  background: #0f172a;
+  color: #94a3b8;
+
+  .card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+
+  .appTitle {
+    color: #f1f5f9;
+  }
+
+  .themeSelect {
+    background: #0f172a;
+    border-color: #475569;
+    color: #e2e8f0;
+  }
+
+  .profileAvatar {
+    background: #6366f1;
+  }
+
+  .profileName {
+    color: #f1f5f9;
+  }
+
+  .cardHeading {
+    color: #64748b;
+  }
+
+  .experienceRole {
+    color: #e2e8f0;
+  }
+
+  .contactLabel {
+    color: #e2e8f0;
+  }
+}
+
+// Midnight Theme
+.app.theme-midnight {
+  background: #1a1025;
+  color: #c4b5fd;
+
+  .card {
+    background: #261838;
+    border-color: #3b2756;
+  }
+
+  .appTitle {
+    color: #e9d5ff;
+  }
+
+  .themeSelect {
+    background: #1a1025;
+    border-color: #5b21b6;
+    color: #e9d5ff;
+  }
+
+  .profileAvatar {
+    background: #7c3aed;
+  }
+
+  .profileName {
+    color: #e9d5ff;
+  }
+
+  .cardHeading {
+    color: #8b5cf6;
+  }
+
+  .experienceRole {
+    color: #e9d5ff;
+  }
+
+  .contactLabel {
+    color: #c4b5fd;
+  }
+}

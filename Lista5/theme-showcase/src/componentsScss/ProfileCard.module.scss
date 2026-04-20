@@ -1,0 +1,42 @@
+// ──────────────────────────────────────────────────────────
+// PROFILE CARD - Style dla karty profilu
+// ──────────────────────────────────────────────────────────
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.profileCard {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xl;
+}
+
+.profileAvatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  @include flex-center;
+  font-size: $font-size-3xl;
+  @include text-heading;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.profileName {
+  margin: 0;
+  font-size: $font-size-2xl;
+  @include text-heading;
+}
+
+.profileTitle {
+  margin: $spacing-sm 0 0;
+  font-size: $font-size-lg;
+  @include text-semibold;
+  @include opacity-reduced;
+}
+
+.profileLocation {
+  margin: $spacing-sm 0 0;
+  font-size: $font-size-md;
+  @include opacity-muted;
+}

@@ -1,0 +1,87 @@
+// ──────────────────────────────────────────────────────────
+// MIXINS - Wielokrotnie używane style
+// ──────────────────────────────────────────────────────────
+
+@use 'variables' as *;
+
+// Responsive design mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == 'md' {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == 'lg' {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+}
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Text styling
+@mixin text-heading {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+@mixin text-label {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@mixin text-semibold($size: $font-size-lg) {
+  font-size: $size;
+  font-weight: $font-weight-semibold;
+}
+
+// Card styling
+@mixin card-base {
+  border-radius: $radius-md;
+  padding: $spacing-2xl;
+  border: 1px solid;
+}
+
+// Opacity utilities
+@mixin opacity-reduced {
+  opacity: 0.75;
+}
+
+@mixin opacity-faded {
+  opacity: 0.65;
+}
+
+@mixin opacity-muted {
+  opacity: 0.6;
+}
+
+@mixin opacity-dimmed {
+  opacity: 0.55;
+}
+
+// Nowrap utility
+@mixin nowrap {
+  white-space: nowrap;
+}
