@@ -1,0 +1,38 @@
+.container {
+  padding: 16px 0;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1f2937;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  width: 100%;
+  font-family: inherit;
+  min-width: 200px;
+}
+
+.select:hover {
+  border-color: #9ca3af;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}

@@ -1,0 +1,42 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.preview {
+  padding-top: 8px;
+}
+
+.previewLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.infoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-size: 12px;
+  cursor: help;
+  flex-shrink: 0;
+}
+
+.previewBox {
+  padding: 12px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #1f2937;
+  line-height: 1.6;
+}

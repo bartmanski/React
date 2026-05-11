@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* Theme-specific styles using CSS custom properties */
+:root {
+  --bg-primary: #f1f5f9;
+  --bg-secondary: #ffffff;
+  --text-primary: #334155;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  
+  /* Skill chips */
+  --chip-language-bg: #dbeafe;
+  --chip-language-text: #1e40af;
+  --chip-language-border: #93c5fd;
+  
+  --chip-framework-bg: #dcfce7;
+  --chip-framework-text: #166534;
+  --chip-framework-border: #86efac;
+  
+  --chip-tool-bg: #fef3c7;
+  --chip-tool-text: #92400e;
+  --chip-tool-border: #fcd34d;
+  
+  --chip-soft-bg: #ede9fe;
+  --chip-soft-text: #5b21b6;
+  --chip-soft-border: #c4b5fd;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #cbd5e1;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  
+  --chip-language-bg: #1e3a5f;
+  --chip-language-text: #93c5fd;
+  --chip-language-border: #3b82f6;
+  
+  --chip-framework-bg: #1b4332;
+  --chip-framework-text: #86efac;
+  --chip-framework-border: #22c55e;
+  
+  --chip-tool-bg: #4d2e0f;
+  --chip-tool-text: #fcd34d;
+  --chip-tool-border: #facc15;
+  
+  --chip-soft-bg: #4c1d95;
+  --chip-soft-text: #c4b5fd;
+  --chip-soft-border: #8b5cf6;
+}
+
+[data-theme="midnight"] {
+  --bg-primary: #1a1025;
+  --bg-secondary: #261838;
+  --text-primary: #e9d5ff;
+  --text-secondary: #d8b4fe;
+  --border-color: #3f1f5e;
+  
+  --chip-language-bg: #1e3a5f;
+  --chip-language-text: #93c5fd;
+  --chip-language-border: #3b82f6;
+  
+  --chip-framework-bg: #1b4332;
+  --chip-framework-text: #86efac;
+  --chip-framework-border: #22c55e;
+  
+  --chip-tool-bg: #4d2e0f;
+  --chip-tool-text: #fcd34d;
+  --chip-tool-border: #facc15;
+  
+  --chip-soft-bg: #4c1d95;
+  --chip-soft-text: #c4b5fd;
+  --chip-soft-border: #8b5cf6;
+}
+
+html {
+  color: var(--text-primary);
+  transition: color 0.2s;
+}
+
+[data-theme] {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.chip-language {
+  background-color: var(--chip-language-bg);
+  color: var(--chip-language-text);
+  border-color: var(--chip-language-border);
+}
+
+.chip-framework {
+  background-color: var(--chip-framework-bg);
+  color: var(--chip-framework-text);
+  border-color: var(--chip-framework-border);
+}
+
+.chip-tool {
+  background-color: var(--chip-tool-bg);
+  color: var(--chip-tool-text);
+  border-color: var(--chip-tool-border);
+}
+
+.chip-soft {
+  background-color: var(--chip-soft-bg);
+  color: var(--chip-soft-text);
+  border-color: var(--chip-soft-border);
+}
