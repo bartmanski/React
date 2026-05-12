@@ -1,4 +1,5 @@
 import { useState, type SubmitEventHandler } from 'react';
+import ErrorMessage from './ErrorHandlingsAndVisuals/ErrorMessage';
 
 interface Props {
   onAdd: (text: string) => Promise<void>;
@@ -20,30 +21,32 @@ export default function AddTodoForm({ onAdd }: Props) {
       await onAdd(text);
       setText('');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to add todo');
+      setError(err instanceof Error ? err.message : 'Nie udało się dodać zadania');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-6">
-      {error && <div className="text-red-500 mb-2 text-sm">{error}</div>}
-      <input
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Add new todo..."
-        className="w-full p-2 border rounded"
-        disabled={loading}
-      />
-      <button
-        type="submit"
-        className="mt-2 w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 disabled:bg-gray-400"
-        disabled={loading}
-      >
-        {loading ? 'Adding...' : 'Add'}
-      </button>
-    </form>
+    <div className="mb-6">
+      {error && <ErrorMessage message={error} />}
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder="Dodaj nowe zadanie..."
+          className="w-full p-2 border rounded"
+          disabled={loading}
+        />
+        <button
+          type="submit"
+          className="mt-2 w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 disabled:bg-gray-400"
+          disabled={loading}
+        >
+          {loading ? 'Dodawanie...' : 'Dodaj'}
+        </button>
+      </form>
+    </div>
   );
 }

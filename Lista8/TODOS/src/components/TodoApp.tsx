@@ -19,7 +19,7 @@ export default function TodoApp() {
         const data = await fetchTodos();
         setTodos(data);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to load todos');
+        setError(err instanceof Error ? err.message : 'Nie udało się załadować zadań');
       } finally {
         setLoading(false);
       }
