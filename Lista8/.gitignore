@@ -1,0 +1,47 @@
+# Pliki archiwów
+Lista2.7z
+Lista3.zip
+Lista4.zip
+Lista5.zip
+Lista6.zip
+Lista7.zip
+
+# Zależności
+node_modules/
+fd
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# Wyjścia build'u
+dist/
+build/
+.next/
+out/
+
+# Pliki środowiska
+.env
+.env.local
+.env.*.local
+
+# Pliki IDE i edytora
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.DS_Store
+Thumbs.db
+
+# Logi
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Różne
+.cache/
+.parcel-cache/
+.turbo/
